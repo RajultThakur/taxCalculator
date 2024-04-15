@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Tax Calculator</title>
+  </head>
+  <body>
+    <div class="app">
+      <div class="formContainer">
+        <form action="#" class="taxForm">
+          <div class="taxFormSubContainer">
+            <label for="name">Enter gross annual income 
+              <span 
+              title="gross annual income is your total salary in a year before any deduction">?</span> </label>
+            <input
+              type="text"
+              placeholder="Enter gross annual income"
+              id="grossIncome"
+              name="grossIncome"
+            />
+          </div>
+          <div class="taxFormSubContainer">
+            <label for="extraIncome"
+              >Enter extra income <span title="Income form other resources">?</span></label
+            >
+            <input
+              type="text"
+              id="extraIncome"
+              name="extraIncome"
+              placeholder="Enter extra income"
+            />
+          </div>
+          <div>
+            <label for="age"></label>
+            <select id="age" name="age">
+              <option value="">select age</option>
+              <option value="40">less then 40</option>
+              <option value="60">40-60</option>
+              <option value="80">above 60</option>
+            </select>
+          </div>
+          <div class="taxFormSubContainer">
+            <label for="deduction"
+              >Enter total applicable deduction <span title="overall deduction in a year from your total earning">?</span></label
+            >
+            <input
+              type="text"
+              id="deduction"
+              name="deduction"
+              placeholder="Enter total applicable deduction"
+            />
+          </div>
+          <button class="submitBtn btn" onsubmit="handleSubmit()" type="submit">
+            Submit
+          </button>
+        </form>
+        <p class="negativeIncome"></p>
+      </div>
+
+      <div class="result">
+        <h3>Your overall income will be</h3>
+        <p class="totalIncome"></p>
+        <p>after tax deduction</p>
+        <button class="btn closeBtn">close</button>
+      </div>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
